@@ -3,3 +3,4 @@ T:<%= @article.title %> <br/>
 D:<%= @article.description %> 
 <%= link_to "edit again", edit_article_path(@article) %>
 <%= link_to "main list", articles_path %>
+<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Sure?"} %>

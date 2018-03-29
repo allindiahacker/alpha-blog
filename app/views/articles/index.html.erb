@@ -7,5 +7,6 @@
   <h3>Desc. : <%= article.description %> </h1>
   <%= link_to "edit", edit_article_path(article) %>
   <%= link_to "show", article_path(article) %>
+  <%= link_to "delete", article_path(article), method: :delete, data: {confirm: "Sure?"} %>
   <br>
   <% end %>
