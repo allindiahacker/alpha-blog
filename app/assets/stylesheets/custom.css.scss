@@ -1,2 +1,12 @@
+$navbar-default-bg: #ffc786;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float:left;
+  color: #fff;
+}
+.center{
+  text-align: center;
+}
