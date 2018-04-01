@@ -5,6 +5,10 @@
 <% @articles.each do |article| %>
   <h3>Title :  <%= article.title %> </h1>
   <h3>Desc. : <%= article.description %> </h1>
+  <small>Created By:  <%= article.user.username if article.user %>
+                      <%= time_ago_in_words(article.created_at) %> ago,
+         last updated <%= time_ago_in_words(article.updated_at) %> ago,
+  </small>
   <%= link_to "edit", edit_article_path(article) %>
   <%= link_to "show", article_path(article) %>
   <%= link_to "delete", article_path(article), method: :delete, data: {confirm: "Sure?"} %>
